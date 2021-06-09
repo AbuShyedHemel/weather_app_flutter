@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:weather_app/dataHelper/datHelper.dart';
 import 'package:weather_app/screens/mainpage.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIOverlays([]);
+  runApp((ChangeNotifierProvider(
+    create: (context) => AppData(),
+    child: MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyApp(),
-    )
-  );
+      home: HomePage(),
+    ),
+  )));
 }
- class MyApp extends StatelessWidget {
-   @override
-   Widget build(BuildContext context) {
-     return Scaffold(
-       body: HomePage(),
-     );
-   }
- }
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: HomePage(),
+    );
+  }
+}

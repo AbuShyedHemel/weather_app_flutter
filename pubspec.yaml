@@ -23,6 +23,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  font_awesome_flutter: 
+  http: ^0.13.3
+  provider: ^5.0.0
+  flutter_launcher_icons: any
+  geolocator: ^7.0.3
+  intl: ^0.17.0
+
+flutter_icons:
+  image_path: "image/weather.png"
+  android: true
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -45,9 +55,22 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+   - image/hail.png
+   - image/clouds.png
+   - image/clear.png
+   - image/lightcloud.png
+   - image/haze.png
+   - image/heavyrain.png
+   - image/heavycloud.png
+   - image/lightcloud.png
+   - image/lightrain.png
+   - image/showers.png
+   - image/sleet.png
+   - image/snow.png
+   - image/thunderstorm.png
+   - image/weather.png
+   - image/180.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
