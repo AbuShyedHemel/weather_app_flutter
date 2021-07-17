@@ -30,13 +30,7 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.transparent,
             body: Container(
               decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                        _data.weather == null
-                            ? "image/clear.png"
-                            : 'image/${_data.weather}.png',
-                      ),
-                      fit: BoxFit.cover)),
+                  image: DecorationImage(image: AssetImage( _data.weather == null ? "image/clear.png": 'image/${_data.weather}.png',),fit: BoxFit.cover)),
               child: Column(
                 children: [
                   Container(
